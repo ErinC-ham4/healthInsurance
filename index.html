@@ -1,27 +1,108 @@
 <!DOCTYPE html>
-<html lang = "en">
 
-<head>
-    <meta charset="UTF-8">
-<!--Creater: Erin C. Cunningham
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!--Creater: Erin C. Cunningham
 Project: Health Insurance Risk Calculator-->
+
+    <style>
+      body {
+        background-color: tomato;
+      }
+
+      .content {
+        max-width: 700px;
+        margin: auto;
+      }
+
+      h1 {
+        font-family: "Courier New", serif;
+        font-size: 60px;
+        letter-spacing: -1.4px;
+        word-spacing: 1.2px;
+        color: white;
+        font-weight: 700;
+        line-height: 0.5;
+        font-variant: small-caps;
+        text-transform: capitalize;
+        text-align: center;
+        line-height: 1;
+      }
+
+      h2 {
+        font-family: "Courier New", serif;
+        font-size: 30px;
+        letter-spacing: -1.4px;
+        word-spacing: 1.2px;
+        color: white;
+        font-weight: 700;
+        line-height: 0.5;
+        text-align: center;
+        line-height: 1;
+      }
+
+      .intro {
+        font-family: "Courier New", serif;
+        font-size: 30px;
+        letter-spacing: -1.4px;
+        word-spacing: 1.2px;
+        color: white;
+        font-weight: 900;
+        line-height: 0.5;
+        text-align: center;
+        line-height: 1;
+      }
+
+      h3 {
+        font-family: "Courier New", serif;
+        font-size: 20px;
+        letter-spacing: -1.4px;
+        word-spacing: 1.2px;
+        color: white;
+        font-weight: 700;
+        line-height: 0.5;
+        text-align: center;
+        line-height: 1;
+      }
+
+      p {
+        font-family: "Courier New", serif;
+        font-size: 15px;
+        letter-spacing: -1.4px;
+        word-spacing: 1.2px;
+        color: white;
+        font-weight: 200;
+        line-height: 0.5;
+        text-align: center;
+        line-height: 1;
+      }
+
+      ul {
+        font-family: "Courier New", serif;
+        color: white;
+        font-size: 15px;
+        list-style-type: square;
+      }
+    </style>
+  <script async src='/cdn-cgi/bm/cv/669835187/api.js'></script></head>
 
 <title>Insurane Risk Calculator</title>
 
 </head>
 
 <body>
-    <h1> Insurane Risk Calculator</h1>
+    <h1> Insurance Risk Calculator</h1>
 
     <p>
-        Hazard Calcualtion <br />
+        Hazard Calculation <br />
     Should we take a risk on you???? Find out if you are insurable...<br />
 
 </p>
 
     <h2> Directions: </h2>
 <p>
-    Please go thorugh each question and secect an option from the drop down menu provided. <br />
+    Please go through each question and select an option from the drop down menu provided. <br />
 </p>
 After all of the questions are answered go ahead and click the "calculate button". <br />
 
@@ -46,10 +127,10 @@ After all of the questions are answered go ahead and click the "calculate button
             <option value= "24">2'</option>
             <option value= "36">3'</option>
             <option value= "48">4'</option>
-            <option value= "72">5'</option>
-            <option value= "84">6'</option>
-            <option value= "96">7'</option>
-            <option value= "108">8'</option>
+            <option value= "60">5'</option>
+            <option value= "72">6'</option>
+            <option value= "84">7'</option>
+            <option value= "96">8'</option>
         </select>
 <br />
 <br />
@@ -155,15 +236,15 @@ After all of the questions are answered go ahead and click the "calculate button
             </h4>
         
     <script>
-        concole.log("Calculating Risk");
+        console.log("Calculating Risk");
 
         function calculateRisk() {
             console.log("calculateRisk()");
 
-            let age = Number(document.getElementById(a1).selectOptions[0].value) ;
+            let age = Number(document.getElementById("a1").selectedOptions[0].value) ;
 
-            let heightIn = Number(document.getElementById("h1").selectOptions[0].value) ;
-            let heightFt = Number(document.getElementById("h2").selectOptions[0].value) ;
+            let heightIn = Number(document.getElementById("h1").selectedOptions[0].value) ;
+            let heightFt = Number(document.getElementById("h2").selectedOptions[0].value) ;
 
             let weightH = Number(document.getElementById("w1").selectedOptions[0].value) ;
 	        let weightT = Number(document.getElementById("w2").selectedOptions[0].value) ;
@@ -173,12 +254,12 @@ After all of the questions are answered go ahead and click the "calculate button
 
 	        let disease = Number(document.getElementById("d1").selectedOptions[0].value) ;
 
-            let totoalHeight = heightFT + heightIn ;
-            let totoalWeight = weightH + weightT + weight0 ;
+            let totalHeight = heightFt + heightIn ;
+            let totalWeight = weightH + weightT + weightO ;
 
             console.log("Question 1 Answer: age")
-            console.log(docment.getElementById("a1").selectedOptions[0].text);
-            console.log(docmenet.getElementById("a1").selectedOptions[0].value);
+            console.log(document.getElementById("a1").selectedOptions[0].text);
+            console.log(document.getElementById("a1").selectedOptions[0].value);
 
             console.log("Question 2 Answers: height feet");
             console.log(document.getElementById("h1").selectedOptions[0].text);
@@ -191,20 +272,20 @@ After all of the questions are answered go ahead and click the "calculate button
             console.log("Question 2 Answers: Total inches");
             console.log(totalHeight);
 
-            console.log("Question 3: Weight Answerws: Hundreds") ;
+            console.log("Question 3: Weight Answers: Hundreds") ;
             console.log(document.getElementById("w1").selectedOptions[0].text);
             console.log(document.getElementById("w1").selectedOptions[0].value);
 
-            console.log("Question 3: Weight Answerws: Tens") ;
+            console.log("Question 3: Weight Answers: Tens") ;
             console.log(document.getElementById("w2").selectedOptions[0].text);
             console.log(document.getElementById("w2").selectedOptions[0].value);
 
-            console.log("Question 3: Weight Answerws: Ones") ;
+            console.log("Question 3: Weight Answers: Ones") ;
             console.log(document.getElementById("w3").selectedOptions[0].text);
             console.log(document.getElementById("w3").selectedOptions[0].value);
 
             console.log("Question 3: Weight Answers: Total");
-            console.log(totalWight) ;
+            console.log(totalWeight) ;
 
             console.log("Question 4: Blood Pressure");
             console.log(document.getElementById("b1").selectedOptions[0].text);
@@ -214,8 +295,8 @@ After all of the questions are answered go ahead and click the "calculate button
             console.log(document.getElementById("d1").selectedOptions[0].text);
             console.log(document.getElementById("d1").selectedOptions[0].value);
 
-            let heightM = totoalHeight * 0.0254
-            let weightK = totoalWeight * 0.45392
+            let heightM = totalHeight * 0.0254
+            let weightK = totalWeight * 0.45392
 
             console.log("Metric");
             console.log(heightM + "Meters");
@@ -238,29 +319,29 @@ After all of the questions are answered go ahead and click the "calculate button
             console.log("BMI Value Points");
             console.log(bmivalue);
 
-            console("Blood Pressure Value Points");
+            console.log("Blood Pressure Value Points");
             console.log(blood);
 
             console.log("Family History Value Points")
             console.log(disease);
 
-            let totalrisj = age + bmivalue + blood + disease
+            let totalRisk = age + bmivalue + blood + disease
 
             console.log("Total Risk");
-            consoel.log(totoalrisk);
+            console.log(totalRisk);
 
             let n = bmi.toFixed(2);
             
-            if (totalrisk <=20) {
-                risk = "Your Risk Value is" + totalrisk + "Low Risk"}
-            else if (totalrisk<= 50) {
-                risk = "Your Risk Value is" + totalrisk + "Moderate Risk"}
-            else if (totalrisk <= 75) {
-		        risk ="Your Risk Value is " + totalrisk +  "High risk"}
+            if (totalRisk <=20) {
+                risk = "Your Risk Value is " + totalRisk + " Low Risk"}
+            else if (totalRisk<= 50) {
+                risk = "Your Risk Value is " + totalRisk + " Moderate Risk"}
+            else if (totalRisk <= 75) {
+		        risk ="Your Risk Value is " + totalRisk +  " High risk"}
 	        else {
-		        risk ="Your Risk Value is " + totalrisk + "Uninsurable"}
+		        risk ="Your Risk Value is " + totalRisk + " Uninsurable"}
 
-    document.getElementById("total risk").innerHTML = "Your BMI = " + n + "and" + risk;
+    document.getElementById("total risk").innerHTML = "Your BMI = " + n + "     ||     " + risk;
 
         }
     </script>
