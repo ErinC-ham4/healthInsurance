@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!--Creater: Erin C. Cunningham
+Project: Health Insurance Risk Calculator-->
+
+    <style>
+      body {
+        background-color: tomato;
+      }
+
+      .content {
+        max-width: 700px;
+        margin: auto;
+      }
+
+      h1 {
+        font-family: "Courier New", serif;
+        font-size: 60px;
+        letter-spacing: -1.4px;
+        word-spacing: 1.2px;
+        color: white;
+        font-weight: 700;
+        line-height: 0.5;
+        font-variant: small-caps;
+        text-transform: capitalize;
+        text-align: center;
+        line-height: 1;
+      }
+
+      h2 {
+        font-family: "Courier New", serif;
+        font-size: 30px;
+        letter-spacing: -1.4px;
+        word-spacing: 1.2px;
+        color: white;
+        font-weight: 700;
+        line-height: 0.5;
+        text-align: center;
+        line-height: 1;
+      }
+
+      .intro {
+        font-family: "Courier New", serif;
+        font-size: 30px;
+        letter-spacing: -1.4px;
+        word-spacing: 1.2px;
+        color: white;
+        font-weight: 900;
+        line-height: 0.5;
+        text-align: center;
+        line-height: 1;
+      }
+
+      h3 {
+        font-family: "Courier New", serif;
+        font-size: 20px;
+        letter-spacing: -1.4px;
+        word-spacing: 1.2px;
+        color: white;
+        font-weight: 700;
+        line-height: 0.5;
+        text-align: center;
+        line-height: 1;
+      }
+
+      p {
+        font-family: "Courier New", serif;
+        font-size: 15px;
+        letter-spacing: -1.4px;
+        word-spacing: 1.2px;
+        color: white;
+        font-weight: 200;
+        line-height: 0.5;
+        text-align: center;
+        line-height: 1;
+      }
+
+      ul {
+        font-family: "Courier New", serif;
+        color: white;
+        font-size: 15px;
+        list-style-type: square;
+      }
+    </style>
+  <script async src='/cdn-cgi/bm/cv/669835187/api.js'></script></head>
+
+<title>Insurane Risk Calculator</title>
+
+</head>
+
+<body>
+    <h1> Insurane Risk Calculator</h1>
+
+    <p>
+        Hazard Calcualtion <br />
+    Should we take a risk on you???? Find out if you are insurable...<br />
+
+</p>
+
+    <h2> Directions: </h2>
+<p>
+    Please go thorugh each question and secect an option from the drop down menu provided. <br />
+</p>
+After all of the questions are answered go ahead and click the "calculate button". <br />
+
+<p>
+    <div>
+        <label> Please Select your Age Range.</label><br />
+    <select id="a1">
+        <option value="0">Please Select</option>
+        <option value="0">Younger than 30</option>
+        <option value="10">30 to 44</option>
+		<option value="20">45 to 59</option>
+		<option value="30">60 and older</option>
+    </select>
+<br />
+<br />
+
+</div>
+        <label> Please Select your height</label><br />
+        <label>Feet</label>
+        <select id = "h1">
+            <option value= "12">1'</option>
+            <option value= "24">2'</option>
+            <option value= "36">3'</option>
+            <option value= "48">4'</option>
+            <option value= "60">5'</option>
+            <option value= "72">6'</option>
+            <option value= "84">7'</option>
+            <option value= "96">8'</option>
+        </select>
+<br />
+<br />
+
+        <label>Inches</label>
+        <select id = "h2">
+            <option value= "0">0'</option>
+            <option value= "1">1'</option>
+            <option value= "2">2'</option>
+            <option value= "3">3'</option>
+            <option value= "4">4'</option>
+            <option value= "5">5'</option>
+            <option value= "6">6'</option>
+            <option value= "7">7'</option>
+            <option value= "8">8'</option>
+            <option value= "9">9'</option>
+            <option value= "10">10'</option>
+            <option value= "11">11'</option>
+        </select>
+    </div>
+
+<br />
+<br />
+
+    <div>
+        <label> Please select your weight in pounds</label><br />
+        <label></label>
+        <select id = "w1">
+            <option valure="0">0</option>
+            <option value= "100">1'</option>
+            <option value= "200">2'</option>
+            <option value= "300">3'</option>
+            <option value= "400">4'</option>
+            
+        </select>
+        <label></label>
+        <select id = "w2">
+            <option value= "0">0</option>
+            <option value= "10">1</option>
+            <option value= "20">2</option>
+            <option value= "30">3</option>
+            <option value= "40">4</option>
+            <option value= "50">5</option>
+            <option value= "60">6</option>
+            <option value= "70">7</option>
+            <option value= "80">8</option>
+            <option value= "90">9</option>
+        </select>
+        <label></label>
+	    <select id="w3">
+	    	<option value="0">0</option>
+		    <option value="1">1</option>
+		    <option value="2">2</option>
+		    <option value="3">3</option>
+		    <option value="4">4</option>
+		    <option value="5">5</option>
+		    <option value="6">6</option>
+		    <option value="7">7</option>
+		    <option value="8">8</option>
+		    <option value="9">9</option>
+       
+        </select>
+        <label>Lbs</label>
+    <br />
+    <br />
+
+    </div>
+
+    <div>
+        <label>What is your Blood Pressure in mm Hg: <br /> The top number is Systolic, 
+                the bottom number is the diastolic.  </label> <br /> 
+	    <select id="b1">
+	    	<option value="0"> Less than 120, and Less than 80</option>
+		    <option value="15">120-129, and less than 80</option>
+		    <option value="30">130-139, or 80-90</option>
+		    <option value="75">140 or Higher or, 90 or Higher</option>
+            <option value="100">1 Higher than 180, and/or Higher than 120</option>
+    </select>
+    <br />
+
+</div>
+
+    <div>
+        <br />
+        <label> Family medical history: <br />
+             Selection the following or if they occur in your family:<br />
+             1.) Diabetes <br />
+             2.) Cancer <br />
+             3.) Alzheimr's </label><br />
+        <select id = "d1">
+            <option value="0"> None</option>
+            <option value="10"> One</option>
+            <option value="20"> Two</option>
+            <option value="30"> Three</option>
+
+        </select>
+    </div>
+            <br /> <br /> 
+            <button onclick="calculateRisk()">Calculate my Risk</button>
+            <h4 id="total risk">
+
+
+            </h4>
+        
+    <script>
+        console.log("Calculating Risk");
+
+        function calculateRisk() {
+            console.log("calculateRisk()");
+
+            let age = Number(document.getElementById("a1").selectedOptions[0].value) ;
+
+            let heightIn = Number(document.getElementById("h1").selectedOptions[0].value) ;
+            let heightFt = Number(document.getElementById("h2").selectedOptions[0].value) ;
+
+            let weightH = Number(document.getElementById("w1").selectedOptions[0].value) ;
+	        let weightT = Number(document.getElementById("w2").selectedOptions[0].value) ;
+	        let weightO = Number(document.getElementById("w3").selectedOptions[0].value) ;
+
+            let blood = Number(document.getElementById("b1").selectedOptions[0].value) ;
+
+	        let disease = Number(document.getElementById("d1").selectedOptions[0].value) ;
+
+            let totalHeight = heightFt + heightIn ;
+            let totalWeight = weightH + weightT + weightO ;
+
+            console.log("Question 1 Answer: age")
+            console.log(document.getElementById("a1").selectedOptions[0].text);
+            console.log(document.getElementById("a1").selectedOptions[0].value);
+
+            console.log("Question 2 Answers: height feet");
+            console.log(document.getElementById("h1").selectedOptions[0].text);
+            console.log(document.getElementById("h1").selectedOptions[0].value);
+
+            console.log("Question 2 Answers: = inches");
+            console.log(document.getElementById("h2").selectedOptions[0].text);
+            console.log(document.getElementById("h2").selectedOptions[0].value);
+
+            console.log("Question 2 Answers: Total inches");
+            console.log(totalHeight);
+
+            console.log("Question 3: Weight Answers: Hundreds") ;
+            console.log(document.getElementById("w1").selectedOptions[0].text);
+            console.log(document.getElementById("w1").selectedOptions[0].value);
+
+            console.log("Question 3: Weight Answers: Tens") ;
+            console.log(document.getElementById("w2").selectedOptions[0].text);
+            console.log(document.getElementById("w2").selectedOptions[0].value);
+
+            console.log("Question 3: Weight Answers: Ones") ;
+            console.log(document.getElementById("w3").selectedOptions[0].text);
+            console.log(document.getElementById("w3").selectedOptions[0].value);
+
+            console.log("Question 3: Weight Answers: Total");
+            console.log(totalWeight) ;
+
+            console.log("Question 4: Blood Pressure");
+            console.log(document.getElementById("b1").selectedOptions[0].text);
+            console.log(document.getElementById("b1").selectedOptions[0].value);
+
+            console.log("Question 5: Family History");
+            console.log(document.getElementById("d1").selectedOptions[0].text);
+            console.log(document.getElementById("d1").selectedOptions[0].value);
+
+            let heightM = totalHeight * 0.0254
+            let weightK = totalWeight * 0.45392
+
+            console.log("Metric");
+            console.log(heightM + "Meters");
+            console.log(weightK + "kg");
+
+            let bmi = weightK / Math.pow(heightM,2)
+            console.log("bmi");
+            console.log(bmi);
+
+            if (bmi >=18.5 && bmi <= 24.9) {
+                bmivalue = 0}
+            else if (bmi >= 25.0 && bmi<= 29.9){
+                bmivalue = 30}
+            else 
+                {bmivalue = 75}
+            
+            console.log("Age Value Points")
+            console.log(age);
+
+            console.log("BMI Value Points");
+            console.log(bmivalue);
+
+            console.log("Blood Pressure Value Points");
+            console.log(blood);
+
+            console.log("Family History Value Points")
+            console.log(disease);
+
+            let totalRisk = age + bmivalue + blood + disease
+
+            console.log("Total Risk");
+            console.log(totalRisk);
+
+            let n = bmi.toFixed(2);
+            
+            if (totalRisk <=20) {
+                risk = "Your Risk Value is " + totalRisk + " Low Risk"}
+            else if (totalRisk<= 50) {
+                risk = "Your Risk Value is " + totalRisk + " Moderate Risk"}
+            else if (totalRisk <= 75) {
+		        risk ="Your Risk Value is " + totalRisk +  " High risk"}
+	        else {
+		        risk ="Your Risk Value is " + totalRisk + " Uninsurable"}
+
+    document.getElementById("total risk").innerHTML = "Your BMI = " + n + "     ||     " + risk;
+
+        }
+    </script>
+    
+
+		
